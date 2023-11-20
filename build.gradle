@@ -20,6 +20,9 @@ configurations {
 repositories {
     mavenCentral()
 }
+jar {
+    enabled = false
+}
 
 dependencies {
     //spring cloud
