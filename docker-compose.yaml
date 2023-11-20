@@ -1,0 +1,19 @@
+version: '3'
+services:
+  spring:
+    container_name: spring
+    image: jungminleeee/impact-dodam
+    restart: always
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    depends_on:
+      - redis
+    networks:
+      - db_network
+
+networks:
+  db_network:
+    driver: bridge
+
