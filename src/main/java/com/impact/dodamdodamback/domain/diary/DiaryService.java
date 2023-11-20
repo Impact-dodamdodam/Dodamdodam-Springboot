@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
 public class DiaryService {
     private final DiaryRepository diaryRepository;
 
-    List<GetDiaryResponse> getDiaryList() {
-        return diaryRepository.findAll().stream().map(diary -> GetDiaryResponse.builder()
+    List<GetDiaryResponse> getDiaryList(Long deviceId) {
+        return diaryRepository.findByDeviceId(deviceId).stream().map(diary -> GetDiaryResponse.builder()
                 .id(diary.getId())
                 .momText(diary.getMomText())
                 .imgUrl(diary.getImgUrl())

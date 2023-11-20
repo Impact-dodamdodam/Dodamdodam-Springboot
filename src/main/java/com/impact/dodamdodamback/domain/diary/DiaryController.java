@@ -15,9 +15,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class DiaryController {
     private final DiaryService diaryService;
-    @GetMapping("/")
-    public ResponseEntity<List<GetDiaryResponse>> getDiaryList(){
-        return ResponseEntity.ok(diaryService.getDiaryList());
+    @GetMapping("/{deviceId}")
+    public ResponseEntity<List<GetDiaryResponse>> getDiaryList(@PathVariable("deviceId")Long deviceId){
+        return ResponseEntity.ok(diaryService.getDiaryList(deviceId));
     }
 
     // 상세조회
