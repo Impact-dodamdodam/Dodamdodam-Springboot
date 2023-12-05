@@ -14,7 +14,7 @@ public class GetArticleResponse {
     private Long id;
     private String title;
     private String author;
+    private String thumbnailImg;
     private String platform;
     private List<PostDto> textList;
-    private List<HashtagDto> hashtagList;
 }

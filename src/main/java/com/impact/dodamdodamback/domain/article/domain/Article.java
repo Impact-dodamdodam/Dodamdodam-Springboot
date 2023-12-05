@@ -16,6 +16,8 @@ public class Article {
     private String platform;
     private String author;
     private String title;
+
+    private String thumbnailImg;
     @OneToMany(mappedBy = "article")
     private List<Post> postList = new ArrayList<>();
     // 하나의 아티클에 여러개 해시태그
